@@ -1,11 +1,11 @@
 <template>
     <div>
         <div class="form-group">
-            <router-link :to="{name: 'createFilm'}" class="btn btn-success">Create new film</router-link>
+            <router-link :to="{name: 'createFilm'}" class="btn btn-success">Добавить фильм</router-link>
         </div>
 
         <div class="panel panel-default">
-            <div class="panel-heading">Films list</div>
+            <div class="panel-heading">Список фильмов</div>
             <div class="panel-body">
                     <div class="cards" v-for="film, index in films">
                         <div class="card">

@@ -43,11 +43,11 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @guest
-                            <li><a href="{{ route('login') }}">Login</a></li>
-                            <li><a href="{{ route('register') }}">Register</a></li>
+                            <li><a href="{{ route('login') }}">Вход</a></li>
+                            <li><a href="{{ route('register') }}">Регистрация</a></li>
                         @else
-                            <li><a href="{{ route('admin.companies.index') }}">Companies</a></li>
-                            <li><a href="{{ route('admin.films.index') }}">Films</a></li>
+                            <li><a href="{{ route('admin.companies.index') }}">Компании</a></li>
+                            <li><a href="{{ route('admin.films.index') }}">Фильмы</a></li>
                             <li><a href="/main">Фоточки</a></li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">

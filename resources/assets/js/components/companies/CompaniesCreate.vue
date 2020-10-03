@@ -11,25 +11,25 @@
                 <form v-on:submit.prevent="saveForm()">
                     <div class="row">
                         <div class="col-xs-12 form-group">
-                            <label class="control-label">Company name</label>
+                            <label class="control-label">Название компании</label>
                             <input type="text" v-model="company.name" class="form-control">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-xs-12 form-group">
-                            <label class="control-label">Company address</label>
+                            <label class="control-label">Адрес компании</label>
                             <input type="text" v-model="company.address" class="form-control">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-xs-12 form-group">
-                            <label class="control-label">Company website</label>
+                            <label class="control-label">Сайт компании</label>
                             <input type="text" v-model="company.website" class="form-control">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-xs-12 form-group">
-                            <label class="control-label">Company email</label>
+                            <label class="control-label">Почта компании</label>
                             <input type="text" v-model="company.email" class="form-control">
                         </div>
                     </div>
