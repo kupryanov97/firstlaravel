@@ -18,19 +18,19 @@
                     <div class="row">
                         <div class="col-xs-12 form-group">
                             <label class="control-label">Film address</label>
-                            <input type="text" v-model="film.address" class="form-control">
+                            <input type="text" v-model="film.mark" class="form-control">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-xs-12 form-group">
                             <label class="control-label">Film website</label>
-                            <input type="text" v-model="film.website" class="form-control">
+                            <input type="text" v-model="film.review" class="form-control">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-xs-12 form-group">
                             <label class="control-label">Film email</label>
-                            <input type="text" v-model="film.email" class="form-control">
+                            <input type="text" v-model="film.year" class="form-control">
                         </div>
                     </div>
                     <div class="row">
@@ -50,7 +50,7 @@
             let app = this;
             let id = app.$route.params.id;
             app.filmId = id;
-            axios.get('/api/v1/Films/' + id)
+            axios.get('/api/v1/films/' + id)
                 .then(function (resp) {
                     app.film = resp.data;
                 })
@@ -63,9 +63,9 @@
                 filmId: null,
                 film: {
                     name: '',
-                    address: '',
-                    website: '',
-                    email: '',
+                    mark: '',
+                    review: '',
+                    year: '',
                 }
             }
         },

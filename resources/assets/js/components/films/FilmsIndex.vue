@@ -15,7 +15,7 @@
                             <p>{{ film.mark }}</p> 
                             <p>{{ film.review }}</p> 
                             <p>{{ film.year }}</p> 
-                                                        <router-link :to="{name: 'editFilm', params: {id: film.id}}" class="btn btn-xs btn-default">
+                            <router-link :to="{name: 'editFilm', params: {id: film.id}}" class="btn btn-xs btn-default">
                                 Edit
                             </router-link>
                             <a href="#"
