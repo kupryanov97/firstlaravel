@@ -19,6 +19,7 @@ import CompaniesEdit from './components/companies/CompaniesEdit.vue';
 import FilmsIndex from './components/films/FilmsIndex.vue';
 import FilmsCreate from './components/films/FilmsCreate.vue';
 import FilmsEdit from './components/films/FilmsEdit.vue';
+import FilmsAbout from './components/films/FilmsAbout.vue';
 const routes = [
     {
         path: '/',
@@ -31,6 +32,7 @@ const routes = [
     {path: '/admin/companies/edit/:id', component: CompaniesEdit, name: 'editCompany'},
     {path: '/admin/films/create', component: FilmsCreate, name: 'createFilm'},
     {path: '/admin/films/edit/:id', component: FilmsEdit, name: 'editFilm'},
+    {path: '/admin/films/about/:id', component: FilmsAbout, name: 'aboutFilm'},
 ]
 
 const router = new VueRouter({ routes })

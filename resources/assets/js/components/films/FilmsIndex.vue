@@ -12,11 +12,8 @@
                         <img src="https://kvmarvel.ru/wp-content/uploads/2019/01/avengers-endgame-final-poster.jpg" alt="Avatar" style="width:100%">
                         <div class="container">
                             <h4><b>{{ film.name }}</b></h4> 
-                            <p>{{ film.mark }}</p> 
-                            <p>{{ film.review }}</p> 
-                            <p>{{ film.year }}</p> 
-                            <router-link :to="{name: 'editFilm', params: {id: film.id}}" class="btn btn-xs btn-default">
-                                Edit
+                            <router-link :to="{name: 'aboutFilm', params: {id: film.id}}" class="btn btn-xs btn-default">
+                                Подробнее
                             </router-link>
                             <a href="#"
                                class="btn btn-xs btn-danger"

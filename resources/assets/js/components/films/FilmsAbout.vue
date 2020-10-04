@@ -6,36 +6,32 @@
         </div>
 
         <div class="panel panel-default">
-            <div class="panel-heading">Edit film</div>
+            <div class="panel-heading">Подробнее о фильме: {{film.name}}</div>
             <div class="panel-body">
                 <form v-on:submit.prevent="saveForm()">
                     <div class="row">
                         <div class="col-xs-12 form-group">
-                            <label class="control-label">Название фильма</label>
-                            <input type="text" v-model="film.name" class="form-control">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-12 form-group">
                             <label class="control-label">Оценка фильма</label>
-                            <input type="number" min="0" max="10" v-model="film.mark" class="form-control">
+                            <p>{{film.mark}}/10</p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-xs-12 form-group">
-                            <label class="control-label">Отзыв о фильме</label>
-                            <input type="text" v-model="film.review" class="form-control">
+                            <label class="control-label">Описание фильма</label>
+                            <p>{{film.review}}</p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-xs-12 form-group">
-                            <label class="control-label">Год фильма</label>
-                            <input type="number" v-model="film.year" class="form-control">
+                            <label class="control-label">Год выхода</label>
+                            <p>{{film.year}}</p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-xs-12 form-group">
-                            <button class="btn btn-success">Update</button>
+                            <router-link :to="{name: 'editFilm', params: {id: film.id}}" class="btn btn-xs btn-default">
+                                Edit
+                            </router-link>
                         </div>
                     </div>
                 </form>
@@ -70,18 +66,7 @@
             }
         },
         methods: {
-            saveForm() {
-                var app = this;
-                var newFilm = app.film;
-                axios.patch('/api/v1/films/' + app.filmId, newFilm)
-                    .then(function (resp) {
-                        app.$router.replace('/');
-                    })
-                    .catch(function (resp) {
-                        console.log(resp);
-                        alert("Could not create your film");
-                    });
-            }
+
         }
     }
 </script>

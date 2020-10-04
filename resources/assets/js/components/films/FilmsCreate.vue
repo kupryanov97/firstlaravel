@@ -11,25 +11,25 @@
                 <form v-on:submit.prevent="saveForm()">
                     <div class="row">
                         <div class="col-xs-12 form-group">
-                            <label class="control-label">Film name</label>
+                            <label class="control-label">Название фильма</label>
                             <input type="text" v-model="film.name" class="form-control">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-xs-12 form-group">
-                            <label class="control-label">Film mark</label>
-                            <input type="text" v-model="film.mark" class="form-control">
+                            <label class="control-label">Оценка фильма</label>
+                            <input type="number" v-model="film.mark" class="form-control">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-xs-12 form-group">
-                            <label class="control-label">Review</label>
+                            <label class="control-label">ОТзыв о фильме</label>
                             <input type="text" v-model="film.review" class="form-control">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-xs-12 form-group">
-                            <label class="control-label">Film year</label>
+                            <label class="control-label">Год выхода фильма</label>
                             <input type="number" v-model="film.year" class="form-control">
                         </div>
                     </div>
@@ -58,6 +58,8 @@
         },
         methods: {
             saveForm() {
+                var app = this;
+                var newFilm = app.film;
                 var app = this;
                 var newFilm = app.film;
                 axios.post('/api/v1/films', newFilm)
